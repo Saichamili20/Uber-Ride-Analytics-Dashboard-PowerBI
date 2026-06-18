@@ -93,6 +93,7 @@ Examines customer behavior, booking patterns, and payment preferences.
 * Data Modeling
 * Data Cleaning & Transformation
 * Interactive Slicers and Filters
+* Bookmarks and Navigations
 
 ---
 
