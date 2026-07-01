@@ -51,3 +51,11 @@ SELECT
 FROM uberrides
 GROUP BY `Payment Method`, `Booking Status`
 ORDER BY `Payment Method`, total_bookings DESC;
+#Customer Rating by Vehicle Type
+SELECT
+    `Vehicle Type`,
+    ROUND(sum(CAST(`Customer Rating` AS DECIMAL(3,2))), 2) AS rating
+FROM uberrides
+WHERE `Customer Rating` IS NOT NULL
+GROUP BY `Vehicle Type`
+ORDER BY rating DESC;
