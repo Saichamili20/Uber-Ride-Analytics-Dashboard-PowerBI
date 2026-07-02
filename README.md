@@ -1,99 +1,271 @@
-# Data Analysis Project
+# 🚖 Uber Ride Analytics | MySQL + Power BI
 
-## Project Overview
-This project focuses on analyzing business/data-related datasets to extract meaningful insights and build interactive dashboards using SQL and Power BI. The goal is to support data-driven decision-making through structured analysis and visualization.
+## 📌 Project Overview
 
----
+The **Uber Ride Analytics** project is an end-to-end data analytics solution developed to analyze ride booking data and uncover meaningful business insights. The project demonstrates the complete analytics workflow, including data cleaning, exploratory analysis, business-focused SQL querying, and interactive dashboard development using Power BI.
 
-## Business Problem
-Organizations generate large amounts of data but often struggle to convert it into actionable insights. This project aims to solve that by identifying trends, patterns, and key performance indicators that help improve decision-making efficiency.
+The primary objective of this project is to help stakeholders understand booking trends, revenue performance, customer behavior, driver performance, and operational efficiency through data-driven insights.
 
 ---
 
-## Dataset
-The dataset used in this project contains structured records related to business operations (such as transactions, customers, rides, or employee data depending on the case study). It includes numerical and categorical variables used for analysis and visualization.
+## 🎯 Business Problem
+
+Ride-hailing companies generate massive amounts of booking data every day. Analyzing this data is essential for improving customer satisfaction, increasing operational efficiency, identifying revenue opportunities, and making informed business decisions.
+
+This project answers important business questions such as:
+
+- How many rides were completed and cancelled?
+- Which vehicle types generate the highest revenue?
+- Which payment methods are most preferred?
+- What are the major reasons for ride cancellations?
+- Which pickup and drop locations have the highest demand?
+- How do customer and driver ratings vary across vehicle types?
+- What operational metrics indicate service efficiency?
 
 ---
 
-## Objectives
-- Clean and preprocess raw data
-- Perform exploratory data analysis (EDA)
-- Identify trends and patterns using SQL
-- Build interactive dashboards in Power BI
-- Generate actionable business insights
+## 🛠 Tech Stack
+
+- **MySQL** – Data Cleaning & Business Analysis
+- **Power BI** – Interactive Dashboard & Data Visualization
+- **SQL** – Data Cleaning, Aggregations, Window Functions, CTEs
+- **Git & GitHub** – Version Control & Project Documentation
 
 ---
 
-## Tools Used
-- SQL (MySQL)
-- Power BI
+## 📂 Dataset
+
+The dataset contains over **30,000 Uber ride booking records** with information including:
+
+- Booking Details
+- Booking Status
+- Customer ID
+- Vehicle Type
+- Pickup & Drop Locations
+- Booking Value
+- Ride Distance
+- Driver Ratings
+- Customer Ratings
+- Payment Method
+- Cancellation Reasons
+- Average Vehicle Time to Arrive (VTAT)
+- Average Customer Time to Arrive (CTAT)
 
 ---
 
-## Project Workflow
-1. Data Collection
-2. Data Cleaning & Preprocessing
-3. Exploratory Data Analysis (EDA)
-4. SQL-based Data Analysis
-5. Data Visualization in Power BI
-6. Insight Generation
-7. Reporting
+# 📋 Project Workflow
+
+```
+Dataset
+      │
+      ▼
+Data Cleaning (MySQL)
+      │
+      ▼
+Business Analysis (SQL)
+      │
+      ▼
+Power BI Dashboard
+      │
+      ▼
+Business Insights
+```
 
 ---
 
-## SQL Analysis
-SQL was used to:
-- Clean and filter data
-- Handle missing and duplicate values
-- Perform aggregations and grouping
-- Extract key metrics using queries
-- Identify patterns and trends in data
+# 🧹 Data Cleaning
+
+The dataset was cleaned using MySQL before analysis.
+
+### Cleaning tasks performed
+
+- Inspected dataset structure
+- Identified missing values
+- Checked duplicate Booking IDs
+- Replaced missing numerical values where appropriate
+- Removed invalid records with missing Booking IDs
+- Investigated NULL payment methods
+- Verified data quality before analysis
 
 ---
 
-## Power BI Dashboard
-An interactive dashboard was built to visualize:
-- Key performance indicators (KPIs)
-- Trends over time
-- Category-wise comparisons
-- Filters and slicers for dynamic analysis
-- Business insights through charts and visuals
+# 📊 SQL Business Analysis
+
+Business analysis was performed using SQL and organized into the following sections:
+
+## Booking Performance
+
+- Total Bookings
+- Booking Status Distribution
+- Success Rate
+- Cancellation Rate
 
 ---
 
-## Key Insights
-- Identified major trends in the dataset
-- Found patterns affecting business performance
-- Discovered high-impact factors influencing outcomes
-- Provided recommendations based on analysis
+## Revenue Analysis
+
+- Total Revenue
+- Average Booking Value
+- Revenue by Vehicle Type
+- Revenue per Vehicle
+- Trips by Vehicle Type
 
 ---
 
-## Repository Structure
+## Customer Behaviour
 
-project-folder/
+- Preferred Payment Method
+- Average Customer Rating
+- Customer Rating by Vehicle Type
+- Customer Distribution
+
+---
+
+## Driver Performance
+
+- Average Driver Rating
+- Driver Cancellation Reasons
+- Average VTAT
+- Average CTAT
+- Driver Performance by Vehicle Type
+
+---
+
+## Operational Insights
+
+- Top Pickup Locations
+- Top Drop Locations
+- Ride Distance Analysis
+- Incomplete Ride Analysis
+- Customer Cancellation Reasons
+
+---
+
+## Advanced SQL Concepts Used
+
+- CASE Statements
+- Aggregate Functions
+- GROUP BY
+- HAVING
+- ORDER BY
+- Window Functions
+  - ROW_NUMBER()
+  - RANK()
+  - DENSE_RANK()
+- Common Table Expressions (CTEs)
+- Subqueries
+
+---
+
+# 📈 Power BI Dashboard
+
+An interactive **three-page Power BI dashboard** was created to visualize key business metrics.
+
+### Dashboard Pages
+
+### 1️⃣ Executive Overview
+
+- Total Bookings
+- Total Revenue
+- Completed Rides
+- Cancellation Rate
+- Average Customer Rating
+- Revenue per Ride
+- Ride Distance Analysis
+
+---
+
+### 2️⃣ Vehicle & Location Analysis
+
+- Revenue by Vehicle Type
+- Vehicle Popularity
+- Pickup Location Analysis
+- Driver vs Customer Ratings
+- VTAT vs CTAT Comparison
+
+---
+
+### 3️⃣ Customer & Monthly Analysis
+
+- Monthly Revenue Trend
+- Payment Method Distribution
+- Booking Status Distribution
+- Monthly Ride Analysis
+
+---
+
+# 📊 Key Business Insights
+
+Some important insights derived from the analysis include:
+
+- Identified the most popular vehicle types based on booking volume.
+- Determined the highest revenue-generating vehicle categories.
+- Analyzed booking success and cancellation rates.
+- Evaluated customer satisfaction using customer ratings.
+- Compared driver performance across different vehicle categories.
+- Identified the most frequently used payment methods.
+- Discovered high-demand pickup and drop locations.
+- Evaluated ride distance trends and operational efficiency.
+
+---
+
+# 📁 Repository Structure
+
+```
+Uber-Ride-Analytics/
 │
-├── data/ # Raw and cleaned datasets
-├── sql/ # SQL queries used for analysis
-├── powerbi/ # Power BI dashboard file (.pbix)
-├── notebooks/ # Optional Python notebooks
-├── images/ # Dashboard screenshots
-├── README.md # Project documentation
-
+├── dataset/
+│   └── uberrides.csv
+│
+├── sql/
+│   ├── 01_data_cleaning.sql
+│   ├── 02_booking_performance.sql
+│   ├── 03_revenue_analysis.sql
+│   ├── 04_customer_behaviour.sql
+│   ├── 05_driver_performance.sql
+│   ├── 06_operational_insights.sql
+│   └── 07_advanced_sql.sql
+│
+├── powerbi/
+│   └── Uber_Ride_Analytics.pbix
+│
+├── screenshots/
+│   ├── overview.png
+│   ├── vehicle_analysis.png
+│   └── customer_analysis.png
+│
+├── README.md
+└── insights.md
+```
 
 ---
 
-## How to Use
-1. Clone the repository
-2. Open SQL scripts in your database tool
-3. Load dataset into your SQL environment
-4. Open Power BI file (.pbix)
-5. Explore dashboard using filters and visuals
+# 🚀 Skills Demonstrated
+
+- Data Cleaning
+- SQL Querying
+- Business Analysis
+- Data Visualization
+- Dashboard Design
+- Analytical Thinking
+- KPI Development
+- Data Storytelling
+- GitHub Documentation
+- Power BI Reporting
 
 ---
 
-## Future Improvements
-- Automate data pipeline using Python or ETL tools
+# 🎯 Future Enhancements
+
+- Connect Power BI directly to MySQL for live reporting
+- Add SQL Views for reusable business logic
+- Develop KPI alerts using DAX
+- Create predictive analytics using Python
+- Automate data refresh and reporting
+
+---
+
+⭐ If you found this project useful, feel free to star the repository!ools
 - Add real-time data integration
 - Improve dashboard UI/UX design
 - Deploy dashboard online using Power BI Service
